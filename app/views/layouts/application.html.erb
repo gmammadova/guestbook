@@ -8,9 +8,25 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Welcome to my Guestbook</h1>
+      <hr/>
+    </header>
+
+    <main>
+      <section>
+        <%= yield %>
+      </section>
+    </main>
+
+    <footer>
+      <hr/>
+      © 2021, By Gulchaman Mammadova
+    </footer>
   </body>
 </html>
