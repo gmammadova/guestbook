@@ -1,7 +1,14 @@
+<header>
+    <%= link_to new_message_path do %>
+        <b>Write me a message</b>
+    <% end %>
+</header>
+<%
+    @messages.each do |message|
+%>
 <aside>
-    <h3>Mobile-friendly UI, <span>Ottawa, Canada</span></h3>
-    <p>MVP is designed to look great on all browsers and devices out of the box for rapid prototyping.
-    </p>
-    <p>It's like an amped up CSS reset that you can toss into any project to get decent styling.</p>
-    <p><a href="https://www.w3schools.com/TAGS/ref_byfunc.asp"><em>Read more</em></a></p>
+    <h3><%= message.sender %>, <span><%= message.location%></span></h3>
+    <p><%= message.body%></p>
+    <p><a href="#"><em>Read more</em></a></p>
 </aside>
+<% end %>

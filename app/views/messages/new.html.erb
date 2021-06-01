@@ -1,0 +1,20 @@
+<%= form_with model: @message, class: "new-message" do |form| %>
+    <header>
+        <h3>Write me a message</h3>
+    </header>
+
+    <%= form.label :sender %>
+    <%= form.text_field :sender %>
+
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+
+    <%= form.label :body, "Message" %>
+    <%= form.text_area :body, size: "50x20" %>
+
+    <br/>
+
+    <%= form.button type: :submit %>
+    <br/>
+    <%= link_to "Go back", root_path %>
+<% end %>
